@@ -56,7 +56,7 @@ fs.readdir("./music/", (err, filesa) => {
 
 bot.on("ready", async () => {
   setInterval(() => {
-    let coreiq = Math.floor(Math.random () * requid.length( - 1) + 1);
+    let coreiq = Math.floor(Math.random () * (requid.length - 1) + 1);
       bot.user.setActivity(requid[coreiq]);
   }, 4000);
   
