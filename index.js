@@ -30,8 +30,6 @@ fs.readdir("./commands/", (err, files) => {
       bot.commands.set(props.help.name, props);
 
   });
-  
-  console.log(`${bot.user.username} is online`);
 
 });
 
@@ -55,6 +53,7 @@ fs.readdir("./music/", (err, filesa) => {
 });
 
 bot.on("ready", async () => {
+  console.log(`${bot.user.username} is online`);
   setInterval(() => {
     let coreiq = Math.floor(Math.random () * (requid.length - 1) + 1);
       bot.user.setActivity(requid[coreiq]);
